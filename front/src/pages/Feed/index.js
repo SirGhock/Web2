@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import api from './services/index';
-import './App.css';
+import api from '../../services/index';
+import Input from '../../components/Input'
+
 
 export default class App extends Component {
   state = {
@@ -27,11 +28,16 @@ export default class App extends Component {
     const { feed } = this.state;
 
     return (
-      <div className="App">
-        {feed.map((feed) =>
-          <li key={feed.id}>{feed.post}</li>
-        )}
-      </div>
+      <>
+        <div className="App">
+          {feed.map((feed) =>
+            <li key={feed.id}>{feed.post}</li>
+          )}
+        </div>
+        <div>
+          <Input/>
+        </div>
+      </>
     );
   }
 }
