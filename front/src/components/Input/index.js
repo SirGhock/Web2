@@ -57,7 +57,7 @@ export default class Input extends Component {
                         onChange={this.handleInputChange}
                         required
                     />
-                    <input type="submit" value="Entrar" />
+                    <input type="submit" value="Enviar" />
                     <p>{status}</p>
                 </form>
             </div>
